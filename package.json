@@ -5,21 +5,62 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "devtools": "react-devtools",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/preset-flow": "^7.14.5",
+    "@testing-library/react-native": "^7.2.0",
+    "axios": "^0.21.1",
+    "dateformat": "^4.5.1",
     "expo": "~42.0.1",
     "expo-status-bar": "~1.0.4",
+    "jest": "^27.2.2",
+    "jest-expo": "^42.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
-    "react-native-web": "~0.13.12"
+    "react-native-chart-kit": "^6.11.0",
+    "react-native-elements": "^3.4.2",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-paper": "^4.9.2",
+    "react-native-pure-chart": "0.0.24",
+    "react-native-simple-dialogs": "^1.4.0",
+    "react-native-svg": "^12.1.1",
+    "react-native-vector-icons": "^8.1.0",
+    "react-native-web": "~0.13.12",
+    "react-test-renderer": "^17.0.2",
+    "socket.io-client": "^4.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@types/dateformat": "^3.0.1",
+    "@types/jest": "^27.0.2",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "@types/react-native-vector-icons": "^6.4.8",
+    "@types/react-test-renderer": "^17.0.1",
+    "i": "^0.3.7",
+    "npm": "^7.24.1",
     "typescript": "~4.0.0"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    ]
   },
   "private": true
 }
